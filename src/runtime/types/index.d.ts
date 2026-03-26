@@ -63,10 +63,6 @@ declare module '#app' {
   }
 }
 
-declare function useRuntimeConfig(): {
-  vueEmail?: VueEmailRuntimeConfig
-}
-
 declare module 'h3' {
   export function defineEventHandler<T = any>(handler: (event: H3Event) => T | Promise<T>): any
   export function getQuery<T = Record<string, any>>(event: H3Event): T

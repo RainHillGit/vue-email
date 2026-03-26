@@ -71,11 +71,6 @@ async function vueToHtml(
 
     const app = createApp(WrapperComponent)
     const html = await renderToString(app)
-    
-    try {
-      app.unmount()
-    } catch {
-    }
 
     return cleanVueHtml(html)
   } catch (error) {
@@ -162,7 +157,7 @@ function prettyHtml(html: string): string {
 export function render(
   component: ComponentInput,
   props?: Record<string, any>,
-  options?: RenderOptions
+  _options?: RenderOptions
 ): string {
   throw new RenderError(
     '不支持同步渲染，请使用 renderAsync',

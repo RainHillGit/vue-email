@@ -466,9 +466,9 @@ export default function vueEmailPlugin(options: VueEmailPluginOptions = {}): Plu
         const files = await response.json()
         
         const fileList = files.map(file => ({
-          name: file.replace(/\\\\/g, '/').replace(/\\.email\\.vue\$/, '').split('/').pop() || '',
+          name: file.replace(/\\/g, '/').replace(/\.email\.vue/, '').split('/').pop() || '',
           path: file,
-          componentName: file.replace(/\\\\/g, '/').replace(/\\.email\\.vue\$/, '')
+          componentName: file.replace(/\\/g, '/').replace(/\.email\.vue/, '')
         }))
         
         updateFileList(fileList)
@@ -578,7 +578,7 @@ export default function vueEmailPlugin(options: VueEmailPluginOptions = {}): Plu
         })
       
       const highlighted = formattedHtml
-        .replace(/(&lt;\/?)([a-zA-Z][a-zA-Z0-9-]*)([^&]*)(&gt;)/g, 
+        .replace(/(&lt;/?)([a-zA-Z][a-zA-Z0-9-]*)([^&]*)(&gt;)/g,
           '<span style="color:#569cd6;">$1</span><span style="color:#4ec9b0;">$2</span><span style="color:#d4d4d4;">$3</span><span style="color:#569cd6;">$4</span>')
         .replace(/(&quot;[^&]*&quot;)/g, '<span style="color:#ce9178;">$1</span>')
       
@@ -654,9 +654,9 @@ export default function vueEmailPlugin(options: VueEmailPluginOptions = {}): Plu
             
             if (payload.type === 'vue-email:file-update') {
               const files = payload.data.map(file => ({
-                name: file.replace(/\\\\/g, '/').replace(/\\.email\\.vue\$/, '').split('/').pop() || '',
+                name: file.replace(/\\/g, '/').replace(/\.email\.vue/, '').split('/').pop() || '',
                 path: file,
-                componentName: file.replace(/\\\\/g, '/').replace(/\\.email\\.vue\$/, '')
+                componentName: file.replace(/\\/g, '/').replace(/\.email\.vue/, '')
               }))
               
               updateFileList(files)
