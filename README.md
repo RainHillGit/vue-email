@@ -1,7 +1,7 @@
 # Vue Email
 
 [![npm version](https://img.shields.io/npm/v/vue-email?label=vue-email)](https://www.npmjs.com/package/vue-email)
-[![license](https://img.shields.io/npm/l/vue-email)](https://github.com/vue-email/vue-email/blob/main/LICENSE)
+[![license](https://img.shields.io/npm/l/vue-email)](https://github.com/RainHillGit/vue-email/blob/main/LICENSE)
 
 > Vue Email components library, inspired by React Email. Build beautiful emails with Vue components.
 
@@ -123,11 +123,11 @@ MIT
 
 ## 🤝 Contributing
 
-Contributions, issues and feature requests are welcome!
+Contributions, issues and feature requests are welcome on [GitHub](https://github.com/RainHillGit/vue-email/issues).
 
 ## 🌟 Show your support
 
-Give a ⭐️ if this project helped you!
+Give a ⭐️ on [GitHub](https://github.com/RainHillGit/vue-email) if this project helped you!
 
 ---
 
